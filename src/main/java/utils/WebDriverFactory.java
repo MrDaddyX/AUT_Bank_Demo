@@ -1,7 +1,5 @@
 package utils;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -30,7 +28,7 @@ public class WebDriverFactory {
 		return new ChromeDriver();
 	}
 
-	public WebDriver onPage(String url) throws FileNotFoundException, IOException {
+	public WebDriver onPage(String url) {
 		driver.manage().window().maximize();
 		driver.get(url);
 		return driver;
